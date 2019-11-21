@@ -1,0 +1,13 @@
+name: 'Azure Pages DevTest'
+description: 'SimpleDeploy'
+inputs:
+  azure_function_location:
+    description: 'Azure Function Location'
+    required: false
+    default: 'api'
+outputs:
+  time: # id of output
+    description: 'The time we we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
