@@ -2,5 +2,5 @@
 echo "Starting to deploy"
 cd /github/workspace
 ls
-cd /bin/app/
-dotnet StaticSitesUploadTool.dll
+cd /bin/staticsites/
+ls
