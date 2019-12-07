@@ -1,3 +1,3 @@
 #!/bin/sh -l
 cd /bin/staticsites/
-dotnet StaticSitesClient.dll
+dotnet StaticSitesClient.dll upload
