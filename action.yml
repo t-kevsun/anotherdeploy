@@ -1,9 +1,6 @@
 name: 'Azure Pages DevTest'
 description: 'SimpleDeploy'
 inputs:
-  azure_pages_contenthost:
-    description: 'Azure Pages Content Host'
-    required: true
   azure_pages_api_token:
     description: 'Azure Pages Api Token'
     required: true
