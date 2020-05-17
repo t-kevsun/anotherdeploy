@@ -1,28 +1,36 @@
-name: 'Azure Pages DevTest'
-description: 'SimpleDeploy'
-inputs:
-  azure_pages_api_token:
-    description: 'Azure Pages Api Token'
-    required: true
-    default: ''
-  action:
-    description: 'Action to perform'
-    required: true
-    default: 'upload'
-  app_artifact_location:
-    description: 'Location of App Artifacts'
-    required: false
-    default: 'app'
-  api_artifact_location:
-    description: 'Location of Api Artifacts'
-    required: false
-    default: 'api'
-outputs:
-  time: # id of output
-    description: 'The time we we greeted you'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+name: 'Azure Static Web Apps Deploy Private'
+description: 'Deploys an application to Azure Static Web Apps Private'
 branding:
   icon: 'upload-cloud'  
   color: 'blue'
+inputs:
+  action:
+    description: 'Action to perform'
+    required: true
+  app_location:
+    description: 'Directory location of the application source code'
+    required: true
+  azure_static_web_apps_api_token:
+    description: 'Required token'
+    required: true
+  api_build_command:
+    description: 'Custom command for Oryx to run when building Azure Functions source code'
+    required: false
+  api_location:
+    description: 'Directory location of the Azure Functions source code'
+    required: false
+  app_artifact_location:
+    description: 'Directory location of the compiled application code after building'
+    required: false
+  app_build_command:
+    description: 'Custom command for Oryx to run when building application source code'
+    required: false
+  repo_token:
+    description: 'Token for interacting with the Github repository. Currently used only for commenting on Pull Requests.'
+    required: false
+  routes_location:
+    description: 'Directory location where the routes.json file can be found in the source code'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
