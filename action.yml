@@ -31,6 +31,10 @@ inputs:
   routes_location:
     description: 'Directory location where the routes.json file can be found in the source code'
     required: false
+outputs:
+  action_fruit:
+    description: 'some output'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
