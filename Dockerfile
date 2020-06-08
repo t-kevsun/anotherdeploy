@@ -1,5 +1,5 @@
 # Change the Dockerfile so that the first line points to the image you deployed above, i.e.FROM <dockerHubUserName>/<dockerHubRepoName>:<tag>
-FROM miwebst/ssclient:miwebstgeo
+FROM tkevsun/basic-deploy:latest
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
